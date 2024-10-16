@@ -30,8 +30,6 @@ resource "aws_security_group" "main" {
   tags = merge(var.tags, { Name = "${var.name}-${var.env}-sg" })
 }
 
-
-
 resource "aws_instance" "rabbitmq" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
