@@ -5,8 +5,8 @@ resource "aws_security_group" "main" {
 
   ingress {
     description = "RABBITMQ"
-    from_port   = var.port_no
-    to_port     = var.port_no
+    from_port   = var.port
+    to_port     = var.port
     protocol    = "tcp"
     cidr_blocks = var.allow_db_cidr
   }

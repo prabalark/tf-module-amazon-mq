@@ -7,7 +7,7 @@ variable "name" {
 variable "vpc_id" {}
 variable "allow_db_cidr" {}
 variable "kms_arn" {}
-variable "port_no" {
+variable "port" {
   default = 5672
 }
 variable "instance_type" {}
