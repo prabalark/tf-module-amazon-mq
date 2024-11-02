@@ -48,9 +48,10 @@ resource "aws_instance" "rabbitmq" {
 
 }
 
-#resource "aws_route53_record" "main" {
-#  zone_id = var.domain_id
-#  name    = "rabbitmq-${var.env}"
-#  type    = "A"
-#  ttl     = 30
-#  records = [aws_instance.rabbitmq.private_ip]
+resource "aws_route53_record" "main" {
+  zone_id = var.domain_id
+  name    = "rabbitmq-${var.env}"
+  type    = "CNAME"
+  ttl     = 30
+  records = [aws_instance.rabbitmq.private_ip]
+}
