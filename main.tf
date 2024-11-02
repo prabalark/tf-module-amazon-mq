@@ -43,7 +43,7 @@ resource "aws_instance" "rabbitmq" {
   }
 
   user_data = base64encode(templatefile("${path.module}/userdata.sh", {
-    rabbitm1_lg_password = data.aws_ssm_parameter.rabbitmq_appuser_password.value
+    rabbitm1_lg_password = data.aws_ssm_parameter.rabbitm1_lg_password.value
   }))
 
 }
