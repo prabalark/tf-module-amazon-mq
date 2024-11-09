@@ -4,5 +4,5 @@
 # directly connecting shell - rabbitmq and connect by above code
 cd /opt
 git clone https://github.com/prabalark/roboshop-72.git
-cd roboshop-shell
+cd roboshop-72-shell
 bash rabbitmq.sh ${rabbitm1_lg_password} &>>/opt/roboshop.log
